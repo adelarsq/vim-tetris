@@ -217,7 +217,7 @@ fu! s:Init()
   hi Shape0 term=reverse ctermfg=DarkCyan ctermbg=DarkCyan guifg=DarkCyan guibg=DarkCyan
   syn match Shape0 "[[\]]"
   syn match Shape1 "MM"
-  hi Shape2 term=reverse ctermfg=DarkBlue ctermbg=DarkBlue guifg=Darklue guibg=DarkBlue
+  hi Shape2 term=reverse ctermfg=DarkBlue ctermbg=DarkBlue guifg=DarkBlue guibg=DarkBlue
   syn match Shape2 "{}"
   hi Shape3 term=reverse ctermfg=Grey ctermbg=Grey guifg=Grey guibg=Grey
   syn match Shape3 "XX"
@@ -300,7 +300,7 @@ fu! s:Loop(c)
   retu 0
 endf
 
-fu! s:Main()
+fu! s:Tetris()
   if !buflisted(s:s)
     cal s:Init()
   el
@@ -361,7 +361,7 @@ fu! s:Main()
   endw
 endf
 
-command Tetris :cal <SID>Main()<CR>
+command Tetris :cal <SID>Tetris()<CR>
 
 let &cpo= s:keepcpo
 unlet s:keepcpo
