@@ -15,10 +15,6 @@
 " 
 " *** Save everything, before you begin to play ***
 
-
-
-
-
 " Name: Tetris (game)
 " Version: 0.53(fork, support official release!)
 " News: Several tweaks to match current official Tetris Standards
@@ -365,7 +361,7 @@ fu! s:Main()
   endw
 endf
 
-nmap <Leader>te :cal <SID>Main()<CR>
+command Tetris :cal <SID>Main()<CR>
 
 let &cpo= s:keepcpo
 unlet s:keepcpo
